@@ -1,0 +1,181 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Define basic font settings and color variables */
+:root {
+    /* Font weights */
+    --font-weight-regular: 400;
+    --font-weight-bold: 700;
+
+    /* Color for headers and texts */
+    --header-color: #000; /* Black for headers */
+    --text-color: #4a4a4a; /* Slightly gray for regular text */
+
+    /* Dark/Light mode colors */
+    --text-color-light: #333; /* Dark text for light background */
+    --text-color-dark: #fff; /* Light text for dark background */
+    --background-color-light: #f4f4f4; /* Light background */
+    --background-color-dark: #0d0d0d; /* Dark background */
+
+    /* Header colors for dark/light mode */
+    --header-color-light: #000; /* Black for headers in light mode */
+    --header-color-dark: #ccc; /* Light gray for headers in dark mode */
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+}
+
+/* Headings (h1 - h6) */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--header-color); /* Color for headers */
+    font-weight: var(--font-weight-bold); /* Bold font for headers */
+}
+
+h1 {
+    font-size: 2.5em;
+}
+h2 {
+    font-size: 2em;
+}
+h3 {
+    font-size: 1.75em;
+}
+h4 {
+    font-size: 1.5em;
+}
+h5 {
+    font-size: 1.25em;
+}
+h6 {
+    font-size: 1em;
+}
+
+/* Paragraph */
+p {
+    color: var(--text-color); /* Slightly gray color for paragraph */
+
+    line-height: 1.5;
+    font-weight: var(--font-weight-regular); /* Regular font for paragraph */
+}
+
+/* Span */
+span {
+    color: var(--text-color);
+    color: green;
+    font-size: 1em;
+}
+
+/* List elements (ul, ol, li) */
+ul,
+ol {
+    padding-left: 20px;
+}
+
+li {
+    color: var(--text-color);
+}
+
+/* Table */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    color: var(--text-color);
+}
+
+/* Light/Dark Mode Styles */
+body .light-mode {
+    background-color: var(--background-color-light);
+    color: var(--text-color-light);
+    --header-color: var(
+        --header-color-light
+    ); /* Color for headers in light mode */
+    --text-color: var(
+        --text-color
+    ); /* Slightly gray color for text in light mode */
+}
+
+body .dark-mode {
+    background-color: var(--background-color-dark);
+    color: var(--text-color-dark);
+    --header-color: var(
+        --header-color-dark
+    ); /* Color for headers in dark mode */
+    --text-color: var(
+        --text-color-dark
+    ); /* Light color for text in dark mode */
+}
+
+
+
+/* Add more styles or media queries as per your need */
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    /* For tablets */
+    h1 {
+        font-size: 2em;
+    } /* Smaller than original */
+    h2 {
+        font-size: 1.75em;
+    }
+    h3 {
+        font-size: 1.5em;
+    }
+    h4 {
+        font-size: 1.25em;
+    }
+    h5 {
+        font-size: 1em;
+    }
+    h6 {
+        font-size: 0.85em;
+    }
+    p,
+    span,
+    li {
+        font-size: 0.9em; /* Slightly smaller */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For mobile phones */
+    h1 {
+        font-size: 1.5em;
+    } /* Smaller than tablet */
+    h2 {
+        font-size: 1.25em;
+    }
+    h3 {
+        font-size: 1.1em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    h5 {
+        font-size: 0.9em;
+    }
+    h6 {
+        font-size: 0.75em;
+    }
+    p,
+    span,
+    li {
+        font-size: 0.85em; /* Smaller than tablet */
+    }
+}
